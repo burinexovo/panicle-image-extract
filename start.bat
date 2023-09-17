@@ -9,6 +9,7 @@ docker build -t panicle_extract_image .
 echo 程式開始進行推論...
 docker run -it panicle_extract_image
 
+echo.
 :input_loop
 set /P is_custom_path="是否需要自訂輸出結果存放的資料夾路徑？(y/n): "
 echo.
@@ -19,13 +20,14 @@ if /i "%is_custom_path%"=="y" (
 
     if exist "!local_path!" (
         @REM echo 路徑存在
+        set local_path=!local_path!\result
+        mkdir !local_path!
     ) else (
         echo 錯誤: 路徑不存在，請輸入有效路徑
         echo.
         goto input_loop
     )
 ) else if /i "!is_custom_path!"=="n" (
-    SET result_folder=result
     mkdir result
     set local_path=!cd!\result
     echo 使用預設路徑 !local_path!
