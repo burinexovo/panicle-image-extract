@@ -25,8 +25,10 @@ if /i "%is_custom_path%"=="y" (
         goto input_loop
     )
 ) else if /i "!is_custom_path!"=="n" (
-    echo 使用預設路徑 C:\
-    set local_path=C:\
+    SET result_folder=result
+    mkdir result
+    set local_path=!cd!\result
+    echo 使用預設路徑 !local_path!
 ) else (
     echo 請輸入有效的選項 'y' 或 'n'
     echo.
@@ -39,7 +41,7 @@ for /f "tokens=*" %%a in ('docker ps -q -n 1') do (
 )
 
 @REM 複製輸出結果到本地端
-echo 準備將輸入與輸出結果複製到路徑 !local_path! ...
+echo 準備將結果複製到路徑 !local_path! 中...
 echo.
 echo data 資料夾為測試集，predictions 資料夾為推論結果
 echo.
