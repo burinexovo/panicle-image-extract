@@ -88,7 +88,6 @@ def exec(inputFileDir, outFileDir):
     # model的路徑
     # model_dir = os.path.join(os.getcwd(), 'models', 'u2net_rice_panicle_image_extract.pth')
     model_dir = os.path.join('./models', 'u2net_rice_panicle_image_extract.pth')
-    print(f'./input/{image_dir}/*')
     img_name_list = glob.glob(f'{image_dir}/*')
     print(f'測試圖片資料集：{ img_name_list }')
     # --------- 2. dataloader ---------
