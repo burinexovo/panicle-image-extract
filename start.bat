@@ -46,7 +46,6 @@ echo.
 echo data 資料夾為測試集，predictions 資料夾為推論結果
 echo.
 docker cp !container_id!:/app/predictions !local_path!
-echo.
 docker cp !container_id!:/app/data !local_path!
 echo.
 
