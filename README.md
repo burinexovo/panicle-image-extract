@@ -15,9 +15,9 @@
 
 ## 安裝
 
-請確保已經安裝 [Docker 應用程式](https://www.docker.com/get-started/)。
+1. 請確保已經安裝 [Docker 應用程式](https://www.docker.com/get-started/)。
 
-由於 AI 模型過大無法上傳至 GitHub，請先[下載](https://drive.google.com/file/d/1kSJ87WazpchF85UEeN5N2IFOi5a5Hfu_/view?usp=sharing)模型後並放至 models 資料夾中
+2. 由於 AI 模型過大無法上傳至 GitHub，請先[下載](https://drive.google.com/file/d/1kSJ87WazpchF85UEeN5N2IFOi5a5Hfu_/view?usp=sharing)模型後並放至 models 資料夾中
 
 ## 使用
 
