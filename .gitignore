@@ -1,0 +1,6 @@
+# 依照不同專案去除檔案
+__pycache__/
+*.pyc
+.vscode/
+.DS_Store
+*.pth
