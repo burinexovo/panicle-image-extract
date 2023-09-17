@@ -28,3 +28,7 @@
     打開 `start.bat` 文件。
 
 ### 在 macOS 上執行（處理中...）
+
+## 原始碼
+
+此 Repository 引用[原始專案](https://aidata.nchu.edu.tw/smarter/en/nchu/aimodelset/smarter_07_1_1_rprb_20230609_rgmc_v00001)來進行修改。
