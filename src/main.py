@@ -10,10 +10,10 @@ import sys
 import cv2 as cv
 import numpy as np 
 import glob
-from pathlib import Path
 from A01_panicle_image_extract import *
 
 # 相對路徑輸入輸出資料夾
+USER_DATA_PATH = './user_data'
 DATA_PATH = './data'
 PROCESSED_DIR = './predictions'
 
@@ -39,7 +39,12 @@ def main():
     try:
         # ========================================================================
         # 呼叫範例用的函數,這邊需勞煩實驗室自行實作之
-        exec(DATA_PATH, PROCESSED_DIR)
+        if os.listdir(USER_DATA_PATH):
+            print('使用您的資料集')
+            exec(USER_DATA_PATH, PROCESSED_DIR)
+        else:
+            print("使用預設資料集")
+            exec(DATA_PATH, PROCESSED_DIR)
 
         # result = demo.exec(DATA_PATH, PROCESSED_DIR)
         # ========================================================================
