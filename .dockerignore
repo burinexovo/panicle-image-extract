@@ -4,3 +4,5 @@
 .vscode/
 start.bat
 **/*.DS_Store
+**/*.placeholder.txt
+LICENSE
